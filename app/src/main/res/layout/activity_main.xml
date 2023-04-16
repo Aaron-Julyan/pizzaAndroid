@@ -1,0 +1,613 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mainActivity"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/circle"
+        android:layout_width="600dp"
+        android:layout_height="250dp"
+        android:background="@drawable/circle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="-50dp">
+
+    </TextView>
+
+    <ImageView
+        android:id="@+id/profile"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/profile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </ImageView>
+
+    <ImageView
+        android:id="@+id/hamburger"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/hamburger"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </ImageView>
+
+    <ImageView
+        android:id="@+id/pizza"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="75dp"
+        android:src="@drawable/pizza"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/selectTopping"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="120dp"
+        android:fontFamily="serif-monospace"
+        android:text="Select Toppings"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pizza">
+    </TextView>
+
+    <TextView
+        android:id="@+id/square"
+        android:layout_width="350dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/square"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selectTopping">
+
+    </TextView>
+
+    <Button
+        android:id="@+id/buttonContinue"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#FFA500"
+        android:text="Continue"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/square">
+
+    </Button>
+
+<!--    pizza sauce-->
+<!--    kalau mau tulisannya bold, kasih 2 textview-->
+    <TextView
+        android:id="@+id/textViewPizzaSauce"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:outlineAmbientShadowColor="@color/black"
+        android:background="@drawable/square_button"
+        app:layout_constraintStart_toStartOf="@+id/square"
+        app:layout_constraintTop_toTopOf="@+id/square">
+
+    </TextView>
+
+    <ImageView
+        android:id="@+id/imageViewPizzaSauce"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="5dp"
+        android:src="@drawable/pizzasauce"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewPizzaSauce"
+        app:layout_constraintStart_toStartOf="@+id/textViewPizzaSauce"
+        app:layout_constraintTop_toTopOf="@+id/textViewPizzaSauce">
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/descriptionPizzaSauce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="15dp"
+        android:fontFamily="casual"
+        android:text="Pizza Sauce"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewPizzaSauce"
+        app:layout_constraintEnd_toEndOf="@+id/textViewPizzaSauce"
+        app:layout_constraintTop_toTopOf="@+id/textViewPizzaSauce">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/pricePizzaSauce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="35dp"
+        android:layout_marginBottom="-20dp"
+        android:fontFamily="casual"
+        android:text="Rp. 5000"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewPizzaSauce"
+        app:layout_constraintEnd_toEndOf="@+id/textViewPizzaSauce"
+        app:layout_constraintTop_toTopOf="@+id/textViewPizzaSauce">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/quantityPizzaSauce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:fontFamily="monospace"
+        android:text="0"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewPizzaSauce"
+        app:layout_constraintEnd_toEndOf="@+id/textViewPizzaSauce"
+        app:layout_constraintTop_toTopOf="@+id/textViewPizzaSauce">
+
+    </TextView>
+
+<!--    mint -->
+    <TextView
+        android:id="@+id/textViewMint"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="70dp"
+        android:outlineAmbientShadowColor="@color/black"
+        android:background="@drawable/square_button"
+        app:layout_constraintStart_toStartOf="@+id/square"
+        app:layout_constraintTop_toTopOf="@+id/square">
+
+    </TextView>
+
+    <ImageView
+        android:id="@+id/imageViewMint"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="-5dp"
+        android:src="@drawable/mintleaves"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewMint"
+        app:layout_constraintStart_toStartOf="@+id/textViewMint"
+        app:layout_constraintTop_toTopOf="@+id/textViewMint">
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/descriptionMint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="45dp"
+        android:layout_marginBottom="15dp"
+        android:fontFamily="casual"
+        android:text="Mint"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewMint"
+        app:layout_constraintEnd_toEndOf="@+id/textViewMint"
+        app:layout_constraintTop_toTopOf="@+id/textViewMint">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/priceMint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="47dp"
+        android:layout_marginBottom="-20dp"
+        android:fontFamily="casual"
+        android:text="Free"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewMint"
+        app:layout_constraintEnd_toEndOf="@+id/textViewMint"
+        app:layout_constraintTop_toTopOf="@+id/textViewMint">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/quantityMint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:fontFamily="monospace"
+        android:text="0"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewMint"
+        app:layout_constraintEnd_toEndOf="@+id/textViewMint"
+        app:layout_constraintTop_toTopOf="@+id/textViewMint">
+
+    </TextView>
+
+<!--    Pepperoni -->
+    <TextView
+        android:id="@+id/textViewPepperoni"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="130dp"
+        android:outlineAmbientShadowColor="@color/black"
+        android:background="@drawable/square_button"
+        app:layout_constraintStart_toStartOf="@+id/square"
+        app:layout_constraintTop_toTopOf="@+id/square">
+
+    </TextView>
+
+    <ImageView
+        android:id="@+id/imageViewPepperoni"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="5dp"
+        android:src="@drawable/pepperoni"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewPepperoni"
+        app:layout_constraintStart_toStartOf="@+id/textViewPepperoni"
+        app:layout_constraintTop_toTopOf="@+id/textViewPepperoni">
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/descriptionPepperoni"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="35dp"
+        android:layout_marginBottom="15dp"
+        android:fontFamily="casual"
+        android:text="Pepperoni"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewPepperoni"
+        app:layout_constraintEnd_toEndOf="@+id/textViewPepperoni"
+        app:layout_constraintTop_toTopOf="@+id/textViewPepperoni">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/pricePepperoni"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="35dp"
+        android:layout_marginBottom="-20dp"
+        android:fontFamily="casual"
+        android:text="Rp. 15000"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewPepperoni"
+        app:layout_constraintEnd_toEndOf="@+id/textViewPepperoni"
+        app:layout_constraintTop_toTopOf="@+id/textViewPepperoni">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/quantityPepperoni"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:fontFamily="monospace"
+        android:text="0"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewPepperoni"
+        app:layout_constraintEnd_toEndOf="@+id/textViewPepperoni"
+        app:layout_constraintTop_toTopOf="@+id/textViewPepperoni">
+
+    </TextView>
+
+<!--        Mushroom-->
+    <TextView
+        android:id="@+id/textViewMushroom"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="190dp"
+        android:outlineAmbientShadowColor="@color/black"
+        android:background="@drawable/square_button"
+        app:layout_constraintStart_toStartOf="@+id/square"
+        app:layout_constraintTop_toTopOf="@+id/square">
+
+    </TextView>
+
+    <ImageView
+        android:id="@+id/imageViewMushroom"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="2dp"
+        android:src="@drawable/mushroom"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewMushroom"
+        app:layout_constraintStart_toStartOf="@+id/textViewMushroom"
+        app:layout_constraintTop_toTopOf="@+id/textViewMushroom">
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/descriptionMushroom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="15dp"
+        android:fontFamily="casual"
+        android:text="Mushroom"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewMushroom"
+        app:layout_constraintEnd_toEndOf="@+id/textViewMushroom"
+        app:layout_constraintTop_toTopOf="@+id/textViewMushroom">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/priceMushroom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="35dp"
+        android:layout_marginBottom="-20dp"
+        android:fontFamily="casual"
+        android:text="Rp. 8000"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewMushroom"
+        app:layout_constraintEnd_toEndOf="@+id/textViewMushroom"
+        app:layout_constraintTop_toTopOf="@+id/textViewMushroom">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/quantityMushroom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:fontFamily="monospace"
+        android:text="0"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewMushroom"
+        app:layout_constraintEnd_toEndOf="@+id/textViewMushroom"
+        app:layout_constraintTop_toTopOf="@+id/textViewMushroom">
+
+    </TextView>
+
+<!--    Olives-->
+    <TextView
+        android:id="@+id/textViewOlives"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="190dp"
+        android:layout_marginTop="10dp"
+        android:outlineAmbientShadowColor="@color/black"
+        android:background="@drawable/square_button"
+        app:layout_constraintStart_toStartOf="@+id/square"
+        app:layout_constraintTop_toTopOf="@+id/square">
+
+    </TextView>
+
+    <ImageView
+        android:id="@+id/imageViewOlives"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="5dp"
+        android:src="@drawable/olives"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewOlives"
+        app:layout_constraintStart_toStartOf="@+id/textViewOlives"
+        app:layout_constraintTop_toTopOf="@+id/textViewOlives">
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/descriptionOlives"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="45dp"
+        android:layout_marginBottom="15dp"
+        android:fontFamily="casual"
+        android:text="Olives"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewOlives"
+        app:layout_constraintEnd_toEndOf="@+id/textViewOlives"
+        app:layout_constraintTop_toTopOf="@+id/textViewOlives">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/priceOlives"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="35dp"
+        android:layout_marginBottom="-20dp"
+        android:fontFamily="casual"
+        android:text="Rp. 3000"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewOlives"
+        app:layout_constraintEnd_toEndOf="@+id/textViewOlives"
+        app:layout_constraintTop_toTopOf="@+id/textViewOlives">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/quantityOlives"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:fontFamily="monospace"
+        android:text="0"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewOlives"
+        app:layout_constraintEnd_toEndOf="@+id/textViewOlives"
+        app:layout_constraintTop_toTopOf="@+id/textViewOlives">
+
+    </TextView>
+
+<!--    Tomato-->
+    <TextView
+        android:id="@+id/textViewTomato"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="190dp"
+        android:layout_marginTop="70dp"
+        android:outlineAmbientShadowColor="@color/black"
+        android:background="@drawable/square_button"
+        app:layout_constraintStart_toStartOf="@+id/square"
+        app:layout_constraintTop_toTopOf="@+id/square">
+
+    </TextView>
+
+    <ImageView
+        android:id="@+id/imageViewTomato"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="7dp"
+        android:src="@drawable/tomato"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewTomato"
+        app:layout_constraintStart_toStartOf="@+id/textViewTomato"
+        app:layout_constraintTop_toTopOf="@+id/textViewTomato">
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/descriptionTomato"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="15dp"
+        android:fontFamily="casual"
+        android:text="Tomato"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewTomato"
+        app:layout_constraintEnd_toEndOf="@+id/textViewTomato"
+        app:layout_constraintTop_toTopOf="@+id/textViewTomato">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/priceTomato"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="35dp"
+        android:layout_marginBottom="-20dp"
+        android:fontFamily="casual"
+        android:text="Rp. 3000"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewTomato"
+        app:layout_constraintEnd_toEndOf="@+id/textViewTomato"
+        app:layout_constraintTop_toTopOf="@+id/textViewTomato">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/quantityTomato"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:fontFamily="monospace"
+        android:text="0"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewTomato"
+        app:layout_constraintEnd_toEndOf="@+id/textViewTomato"
+        app:layout_constraintTop_toTopOf="@+id/textViewTomato">
+
+    </TextView>
+
+<!--    Cheese-->
+    <TextView
+        android:id="@+id/textViewCheese"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="190dp"
+        android:layout_marginTop="130dp"
+        android:outlineAmbientShadowColor="@color/black"
+        android:background="@drawable/square_button"
+        app:layout_constraintStart_toStartOf="@+id/square"
+        app:layout_constraintTop_toTopOf="@+id/square">
+
+    </TextView>
+
+    <ImageView
+        android:id="@+id/imageViewCheese"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="5dp"
+        android:src="@drawable/cheese"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewCheese"
+        app:layout_constraintStart_toStartOf="@+id/textViewCheese"
+        app:layout_constraintTop_toTopOf="@+id/textViewCheese">
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/descriptionCheese"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="15dp"
+        android:fontFamily="casual"
+        android:text="Cheese"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewCheese"
+        app:layout_constraintEnd_toEndOf="@+id/textViewCheese"
+        app:layout_constraintTop_toTopOf="@+id/textViewCheese">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/priceCheese"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="-20dp"
+        android:fontFamily="casual"
+        android:text="Rp. 10000"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewCheese"
+        app:layout_constraintEnd_toEndOf="@+id/textViewCheese"
+        app:layout_constraintTop_toTopOf="@+id/textViewCheese">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/quantityCheese"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:fontFamily="monospace"
+        android:text="0"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewCheese"
+        app:layout_constraintEnd_toEndOf="@+id/textViewCheese"
+        app:layout_constraintTop_toTopOf="@+id/textViewCheese">
+
+    </TextView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
